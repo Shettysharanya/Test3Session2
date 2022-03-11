@@ -16,26 +16,29 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
 (gdb) b main
-Breakpoint 1 at 0x82c: file p3final.c, line 35.
+Breakpoint 1 at 0x865: file p3final.c, line 24.
 (gdb) r
-Starting program: /home/runner/Test3Session2/a.out 
+Starting program: /home/runner/Test3Session2-2/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p3final.c:35
-35    int n = input();
+Breakpoint 1, main () at p3final.c:24
+24  {
 (gdb) n
-Enter the number
-2
-36    int isp = isprime(n);
+26    input_n_and_r(&n,&r);
 (gdb) n
-37    output(n,isp);
+enter the total number of objescts and the number of objects you choose
+5
+7
+27    result= ncr(n,r);
 (gdb) n
-2 is a prime number
-38    return 0;
+28    output(n,r,result);
 (gdb) n
-39    }(gdb) n
-__libc_start_main (main=0x555d4a200824 <main>, argc=1, argv=0x7fff1bc0bdd8, 
-    init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, 
-    stack_end=0x7fff1bc0bdc8) at ../csu/libc-start.c:344
+29    return 0;
+(gdb) n
+30    }(gdb) n
+__libc_start_main (main=0x556734e0085d <main>, argc=1, 
+    argv=0x7ffd6822a348, init=<optimized out>, fini=<optimized out>, 
+    rtld_fini=<optimized out>, stack_end=0x7ffd6822a338)
+    at ../csu/libc-start.c:344
 344 ../csu/libc-start.c: No such file or directory.
 (gdb) 
